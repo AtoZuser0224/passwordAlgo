@@ -1,6 +1,6 @@
-fun main() {
+fun main(args: Array<String>) {
     val encryption = Encryption()
-    println(encryption.Encrypt("abcdefgasdfh"))
+    println(encryption.Encrypt("bwsbwsbws1"))
     println(encryption.Encrypt("dbcdefgh"))
 
 }

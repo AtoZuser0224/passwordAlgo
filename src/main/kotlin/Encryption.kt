@@ -3,7 +3,7 @@ class Encryption {
     val m = 3
     val reverse = true
 
-    val keycode = "asdfasdf67a8s7d67f8a7sasdff"
+    val keycode = "asdfasdf67a87df8a7sasdff"
 
     fun Encrypt(pw: String): String {
         var password = ""
@@ -33,7 +33,7 @@ class Encryption {
             result+=it
         }
         for (i in result.indices){
-            if (i%2 == 0 && i != 0){
+            if (i%2 == 0 && i != 0 && i != result.toCharArray().size-1){
                 returnResult += numberToEnglishChar("${result[i-1]}${result[i]}")
             }
         }
@@ -123,6 +123,7 @@ class Encryption {
             80 -> ':'
             81 -> '`'
             82 -> '~'
+
             else -> number
         }.toString()
     }
