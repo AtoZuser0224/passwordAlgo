@@ -1,3 +1,4 @@
+import java.lang.Exception
 
 class Encryption {
     val m = 3
@@ -33,8 +34,12 @@ class Encryption {
             result+=it
         }
         for (i in result.indices){
-            if (i%2 == 0 && i != 0 && i != result.toCharArray().size-1){
-                returnResult += numberToEnglishChar("${result[i-1]}${result[i]}")
+            try {
+                if (i%2 == 0 && i != 0 && i != result.toCharArray().size-1){
+                    returnResult += numberToEnglishChar("${result[i-1]}${result[i]}")
+                }
+            }catch (_:Exception){
+
             }
         }
         return returnResult
